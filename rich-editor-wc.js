@@ -220,7 +220,7 @@ Error generating stack: `+o.message+`
   row-gap: 0.5rem;
   align-items: stretch;
   border-bottom: 1px solid #bbb;
-  padding: var(--default-padding);
+  padding: 0.3rem;
 `,kn=Cn.div`
   width: 1px;
   background-color: #bbb;
