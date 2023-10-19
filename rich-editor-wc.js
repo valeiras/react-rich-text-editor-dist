@@ -16406,7 +16406,7 @@ N.$insertNodes = function (e, t) {
 };
 N.$isBlockElementNode = Pd;
 N.$isDecoratorNode = de;
-N.$isElementNode = $;
+N.$isElementNode = $$;
 N.$isInlineElementOrDecoratorNode = function (e) {
   return ($$(e) && e.isInline()) || (de(e) && e.isInline());
 };
