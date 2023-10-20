@@ -241,7 +241,7 @@ Error generating stack: `+o.message+`
     width: 16px;
     height: 16px;
     opacity: 0.3;
-    background-image: url(./src/imgs/draggable-block-menu.svg);
+    background-image: url(https://rich-text-editor.desarrolloennubo.es/draggable-block-menu.svg);
   }
 
   .draggable-block-menu:active {
