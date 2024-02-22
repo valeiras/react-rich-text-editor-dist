@@ -872,4 +872,4 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     border: var(--default-border);
     padding: 0 0.5rem;
   }
-`,oI=new _2,lI=()=>S.jsx(w2,{client:oI,children:S.jsx(rI,{})}),sI=w$(lI);customElements.define("rich-text-editor",sI);export{G2 as $,uI as E,Ue as L,z as a,ye as b,sk as c,xk as d,jk as e,_k as f,uD as g,S as j,N as r,vt as s,aL as u};
+`,oI=new _2,lI=()=>S.jsx(w2,{client:oI,children:S.jsx(rI,{})}),sI=w$(lI);window.customElements.define("rich-text-editor",sI);export{G2 as $,uI as E,Ue as L,z as a,ye as b,sk as c,xk as d,jk as e,_k as f,uD as g,S as j,N as r,vt as s,aL as u};
