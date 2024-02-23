@@ -534,7 +534,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     width: 1rem;
     height: 1rem;
     opacity: 0.3;
-    background-image: url(https://rich-text-editor.desarrolloennubo.es/draggable-block-menu.svg);
+    background-image: url(https://util.ennubo.es/editor/draggable-block-menu.svg);
   }
 
   .draggable-block-menu:active {
