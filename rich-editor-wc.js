@@ -555,7 +555,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     opacity: 0;
     will-change: transform;
   }
-`,ZL=()=>{const[e]=he.useLexicalComposerContext(),t=()=>{const n=JSON.stringify(e.getEditorState()),r=new CustomEvent("internal-editor-state",{detail:{editorState:n}});window.dispatchEvent(r)};return N.useEffect(()=>(window.addEventListener("save-editor-state",t),()=>{window.removeEventListener("save-editor-state",t)}),[]),S.jsx(S.Fragment,{})},eI=({children:e})=>S.jsx(tI,{className:"GlobalStyles",$editorPadding:HD,children:e}),tI=vt.div`
+`,ZL=()=>{const[e]=he.useLexicalComposerContext(),t=()=>{const n=JSON.stringify(e.getEditorState()),r=new CustomEvent("internal-editor-state",{detail:{editorState:n}});window.dispatchEvent(r)};return N.useEffect(()=>(window.addEventListener("get-editor-state",t),()=>{window.removeEventListener("get-editor-state",t)}),[]),S.jsx(S.Fragment,{})},eI=({children:e})=>S.jsx(tI,{className:"GlobalStyles",$editorPadding:HD,children:e}),tI=vt.div`
   line-height: 1.5;
   font-weight: 400;
 
