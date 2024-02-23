@@ -534,7 +534,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     width: 1rem;
     height: 1rem;
     opacity: 0.3;
-    background-image: url(https://util.ennubo.es/editor/draggable-block-menu.svg);
+    background-image: url(https://utils.ennubo.es/editor/draggable-block-menu.svg);
   }
 
   .draggable-block-menu:active {
@@ -689,16 +689,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     border-top-color: var(--disabled-color);
     animation: spinner 0.6s linear infinite, delayedfadein 1.5s ease-in-out;
   }
-`;const nI={heading:{h1:"rich-editor-h1",h2:"rich-editor-h2",h3:"rich-editor-h3",h4:"rich-editor-h4",h5:"rich-editor-h5",h6:"rich-editor-h6"},text:{bold:"rich-editor-bold",italic:"rich-editor-italic",underline:"rich-editor-underline",strikethrough:"rich-editor-strikethrough"},link:"rich-editor-link",list:{ul:"rich-editor-ul",ol:"rich-editor-ol"},embedBlock:{base:"rich-editor-embed-block",focus:"rich-editor-embed-block-focus"},image:"rich-editor-image",table:"rich-editor-table",tableCell:"rich-editor-table-cell",tableCellHeader:"rich-editor-table-cell-header"},rI=e=>{console.error(e)},iI=({height:e,width:t,initialContent:n})=>{const r={namespace:"MyEditor",theme:nI,onError:rI,nodes:[jl.HeadingNode,Eo.ListNode,Eo.ListItemNode,pn.LinkNode,pn.AutoLinkNode,uu,ss],editorState:n},[i,o]=N.useState(null),l=a=>{a!==null&&o(a)},s=()=>i?S.jsx(XL,{anchorElem:i}):null;return S.jsxs(eI,{children:[S.jsx(Yp,{position:"top-center",transition:qD}),S.jsx(oI,{className:"RichEditor",$width:t,children:S.jsxs(qR.LexicalComposer,{initialConfig:r,children:[S.jsx(ZL,{}),S.jsx(NL,{}),S.jsx(Fk.ListPlugin,{}),S.jsx(Xk.LinkPlugin,{}),S.jsx(mD,{}),S.jsx(FL,{}),S.jsx(nD.TabIndentationPlugin,{}),S.jsx(s,{}),S.jsx(_k.RichTextPlugin,{contentEditable:S.jsx("div",{className:"editor-scroller",style:{height:e},children:S.jsx("div",{className:"editor",ref:l,children:S.jsx(xk.ContentEditable,{className:"content-editable"})})}),placeholder:S.jsx("div",{className:"placeholder"}),ErrorBoundary:uD}),S.jsx(Ak.HistoryPlugin,{}),S.jsx(gL,{}),S.jsx(EL,{}),S.jsx(jk.AutoFocusPlugin,{}),S.jsx(V2,{})]})})]})},oI=vt.div`
+`;const nI={heading:{h1:"rich-editor-h1",h2:"rich-editor-h2",h3:"rich-editor-h3",h4:"rich-editor-h4",h5:"rich-editor-h5",h6:"rich-editor-h6"},text:{bold:"rich-editor-bold",italic:"rich-editor-italic",underline:"rich-editor-underline",strikethrough:"rich-editor-strikethrough"},link:"rich-editor-link",list:{ul:"rich-editor-ul",ol:"rich-editor-ol"},embedBlock:{base:"rich-editor-embed-block",focus:"rich-editor-embed-block-focus"},image:"rich-editor-image",table:"rich-editor-table",tableCell:"rich-editor-table-cell",tableCellHeader:"rich-editor-table-cell-header"},rI=e=>{console.error(e)},iI=({height:e,width:t,initialContent:n})=>{let r={namespace:"MyEditor",theme:nI,onError:rI,nodes:[jl.HeadingNode,Eo.ListNode,Eo.ListItemNode,pn.LinkNode,pn.AutoLinkNode,uu,ss]};n&&(r={...r,editorState:n});const[i,o]=N.useState(null),l=a=>{a!==null&&o(a)},s=()=>i?S.jsx(XL,{anchorElem:i}):null;return S.jsxs(eI,{children:[S.jsx(Yp,{position:"top-center",transition:qD}),S.jsx(oI,{className:"RichEditor",$width:t,$height:e,children:S.jsxs(qR.LexicalComposer,{initialConfig:r,children:[S.jsx(ZL,{}),S.jsx(NL,{}),S.jsx(Fk.ListPlugin,{}),S.jsx(Xk.LinkPlugin,{}),S.jsx(mD,{}),S.jsx(FL,{}),S.jsx(nD.TabIndentationPlugin,{}),S.jsx(s,{}),S.jsx(_k.RichTextPlugin,{contentEditable:S.jsx("div",{className:"editor-scroller",children:S.jsx("div",{className:"editor",ref:l,children:S.jsx(xk.ContentEditable,{className:"content-editable"})})}),placeholder:S.jsx("div",{className:"placeholder"}),ErrorBoundary:uD}),S.jsx(Ak.HistoryPlugin,{}),S.jsx(gL,{}),S.jsx(EL,{}),S.jsx(jk.AutoFocusPlugin,{}),S.jsx(V2,{})]})})]})},oI=vt.div`
   border-radius: var(--border-radius);
   border: var(--default-border);
   width: ${e=>e.$width};
+  height: ${e=>e.$height};
   overflow: hidden;
   resize: both;
   position: static;
+  display: flex;
+  flex-direction: column;
 
   .editor-scroller {
-    min-height: 20rem;
     border: 0;
     display: flex;
     position: relative;
@@ -706,7 +708,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     z-index: 0;
     overflow-y: scroll;
     width: 100%;
-    height: 100%;
+    flex: 1;
   }
 
   .editor {
