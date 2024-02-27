@@ -811,12 +811,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     display: inline-block;
     position: relative;
     user-select: none;
-    width: 100%;
+    width: 50%;
+    max-width: 800px;
+  }
+
+  p:has(.rich-editor-image) {
+    text-align: center;
   }
 
   .rich-editor-image img {
-    width: 100%;
     cursor: default;
+    width: 100%;
   }
 
   .rich-editor-image img.focused {
