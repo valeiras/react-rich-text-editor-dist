@@ -794,6 +794,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     cursor: pointer;
     font-weight: 600;
     color: purple;
+    pointer-events: none;
   }
 
   .rich-editor-embed-block {
